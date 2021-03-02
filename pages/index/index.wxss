@@ -1,0 +1,11 @@
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*搜索框*/
+.search{
+  font-size: 32rpx;
+  margin-left: 150rpx;
+}

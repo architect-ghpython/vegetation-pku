@@ -1,0 +1,58 @@
+// map.js
+Page({      
+
+  data: {
+    markers: [
+
+    {
+    iconPath: "/pages/images/山桃_circle.png",
+    id:"0",
+    name:"山桃",
+    latitude: 39.988859,
+    longitude: 116.314021,
+    width: 50,
+    height: 50
+  },
+  ],
+
+  },
+  regionchange(e) {
+    console.log(e.type)
+  },
+  markertap(event) {
+    console.log(event.detail.markerId)
+    const markers = this.data.markers;
+		for (let i = 0; i < markers.length; i++) { // 本示例只有一个marker，可用于处理单marker和多marker情况
+			if (event.markerId === markers[i].id) {
+        wx.navigateTo({
+          url: '/pages/vegetations/' + markers[i].name + '/' + markers[i].name,
+          success: (result) => {
+            console.log("成功跳转");
+          },
+          fail: (res) => {},
+          complete: (res) => {},
+        })
+				// qqmapsdk.reverseGeocoder({ // 调用逆地址解析
+				// 	location: {
+				// 		latitude: markers[i].latitude,
+				// 		longitude: markers[i].longitude
+				// 	},
+				// 	success: res => {
+				// 		if (res.result && res.result.formatted_addresses) { // 避免名称无数据处理
+				// 			this.setData({
+				// 				markerCallbackTxt: res.result.formatted_addresses.recommend
+				// 			});
+				// 		} else {
+				// 			this.setData({
+				// 				markerCallbackTxt: res.result.address
+				// 			});
+				// 		}
+				// 	}
+				// });
+			}
+		}
+  },
+  controltap(e) {
+    console.log(e.detail.controlId)
+  }
+})

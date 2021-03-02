@@ -1,0 +1,58 @@
+<!--index.wxml-->
+
+<!-- <view class= "title">北京大学学生流浪猫关爱协会</view>
+<navigator url="/pages/about/web/web">
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" src="/pages/images/huihui.jpg" style= "width: 93%;">
+  </image>
+</view>
+</navigator>
+
+<text> \n </text> -->
+<!-- 
+<view class="head1">协会介绍</view>
+
+<view class="body">
+北京大学学生流浪猫关爱协会（简称“北大猫协”）自 2006 年成立，为北京大学团委指导下、由学生自发组织的非营利性志愿组织。
+</view>
+
+
+<view class="head1">联系我们</view>
+
+<view class="body">
+点击最上方会徽可以查看小程序介绍推送，点击推送中的【<text bindtap="copy1" class="copy">北大猫协</text>】可关注我们的公众号，公众号会提供捐赠方式。有问题或建议可以关注北大猫协公众号后留言。
+</view>
+
+<view class="body">
+小程序所有代码开源，使用 MIT License ，可用于商业用途。<text bindtap="copy2" class="copy">点击</text>复制 GitHub 仓库链接后请在浏览器中粘贴打开，GitHub 有详细的教程，还配有完整的教学视频，完全不会代码的同学也能学会使用。
+</view> -->
+
+<!-- <text bindtap="saveImage" class="copy">北大猫协</text> -->
+
+
+
+<!-- <view class="body">
+<navigator url="/pages/donate/donate" >
+<text class="copy">打赏链接</text>
+</navigator>
+</view> -->
+
+<text> \n </text>
+
+<view class="staff">2021-03-02</view>
+
+<view class="staff">
+小程序开发：circle
+</view>
+
+<view class="staff">
+资料统计：circle</view>
+
+<view class="staff">
+供图：circle
+</view>
+
+
+<text> \n </text>
+
+<!-- <button open-type='feedback' type='primary'>意见反馈</button> -->

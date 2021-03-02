@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<!-- <text> \n </text> -->
+
+<view class="circle">
+<image  class = 'avator ' src="/pages/images/circle.png" mode='aspectFill' ></image>
+<input class = 'search' placeholder="请输入植物名称" bindconfirm="bindconfirmT" placeholder-class="placeholder" />
+</view>
+
+<!-- <text> \n </text>  -->
+<view class="container">
+  <view class="divLineLong"></view>
+</view>
+
+<block wx:for="{{vege_list}}">
+  <navigator url="/pages/vegetations/{{item.name}}/{{item.name}}" >
+    <view class="catitem">
+      <image  class = 'avator ' src="../images/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <view class= "cat-name">{{item.name}}</view> 
+    </view>
+    <view class="divLine"></view>
+  </navigator>  
+</block>

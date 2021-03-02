@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/logs/logs",
+    "pages/map/map"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "燕园草木",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor":"#94070a",
+    "color": "#888888",
+    "list": [
+      {
+        "text": "查找",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "地图",
+        "pagePath": "pages/map/map"
+      },
+      {
+        "text": "关于",
+        "pagePath": "pages/about/about"
+      }
+    ]
+  }
+
+}

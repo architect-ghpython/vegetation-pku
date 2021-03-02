@@ -1,0 +1,34 @@
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" class="cat_image" src="cloud://vegetation-9g07cn1j2fc808a2.7665-vegetation-9g07cn1j2fc808a2-1305114445/{{name}}.png" style= "width: 90%;">
+  </image>
+</view>
+
+
+<view class = "itemname1">
+    <view class= "cat-card">{{name}} </view> <text decode="{{true}}">&nbsp;&nbsp;</text> <view class= "cat-card-it">{{nameit}}</view>
+</view>
+
+
+
+<view class = "itemname1">
+<view wx:for = "{{items}}">
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    {{item.category}}
+  </view>
+  <view class = "itemname2">{{item.content}}</view>
+</view>
+</view>
+
+
+<text> \n </text>
+
+<block wx:for="{{nums}}">
+
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}{{item.num}}.jpg" style= "width: 90%;">
+  </image>
+</view>
+
+<text> \n </text>
+
+</block>
