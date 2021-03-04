@@ -1,19 +1,36 @@
 Page({ 
  data: {
 name:"山桃",
-nameit:"Amygdalus davidiana",
+ nameit:"Amygdalus davidiana",
+markers: [
+
+{iconPath: "/pages/images/山桃_circle.png",
+latitude:"39.988859",
+longitude:"116.314021",
+width: 50,
+height: 50
+},],
  items:[ 
 {category:"属",
- content:"桃属",},
+ content:" 桃属",},
+{category:"科",
+ content:" 蔷薇科",},
+{category:"目",
+ content:" 蔷薇目",},
+{category:"纲",
+ content:" 双子叶植物纲",},
+{category:"门",
+ content:" 被子植物门",},
+{category:"观赏时间",
+ content:" 3-4月",},
+{category:"地点",
+ content:" 三教",},
 
 ], 
 relationship:[], 
 nums:[
 ],
-
-  audKey: '', 
 },
-
   //音频播放  
   audioPlay(e) {
     var that = this,

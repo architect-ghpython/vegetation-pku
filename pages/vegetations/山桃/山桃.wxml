@@ -32,3 +32,12 @@
 <text> \n </text>
 
 </block>
+
+<text> \n </text>
+
+<view style="display:flex; justify-content:center; align-items:center;">
+<map id="map" longitude="116.310694" latitude="39.992779" scale="15"  controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" subkey="44WBZ-WSY6W-OKPR3-R6STW-U6FMZ-YUB7B" show-compass="ture"show-scale = "ture"  bindmarkertap="markertap" bindregionchange="regionchange" show-location style="width: 90%; height: 500px;"></map>
+</view>
+
+
+<text> \n </text>

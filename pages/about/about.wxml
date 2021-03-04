@@ -22,12 +22,18 @@
 <view class="body">
 点击最上方会徽可以查看小程序介绍推送，点击推送中的【<text bindtap="copy1" class="copy">北大猫协</text>】可关注我们的公众号，公众号会提供捐赠方式。有问题或建议可以关注北大猫协公众号后留言。
 </view>
+-->
 
 <view class="body">
-小程序所有代码开源，使用 MIT License ，可用于商业用途。<text bindtap="copy2" class="copy">点击</text>复制 GitHub 仓库链接后请在浏览器中粘贴打开，GitHub 有详细的教程，还配有完整的教学视频，完全不会代码的同学也能学会使用。
-</view> -->
+此小程序致力于展示北京大学燕园校区内具有观赏性的植物。校园内还有很多其它有趣的物种，欢迎关注“北大绿协”公众号了解。
+</view> 
+
+<view class="body">
+小程序所有代码和植物档案开源，使用 MIT License 。<text bindtap="copy2" class="copy">点击</text>复制 GitHub 仓库链接后请在浏览器中粘贴打开。
+</view> 
 
 <!-- <text bindtap="saveImage" class="copy">北大猫协</text> -->
+
 
 
 
@@ -39,7 +45,7 @@
 
 <text> \n </text>
 
-<view class="staff">2021-03-02</view>
+<view class="staff">2021-03-04</view>
 
 <view class="staff">
 小程序开发：circle
@@ -55,4 +61,3 @@
 
 <text> \n </text>
 
-<!-- <button open-type='feedback' type='primary'>意见反馈</button> -->
