@@ -18,6 +18,7 @@
   justify-content: flex-start;
 }
 
+
 .itemname2 {
   font-size: 30rpx;
   color:#353535;
@@ -153,13 +154,12 @@
 
 .staff {
   font-size: 20rpx;
-  margin-left: 40rpx;
-  margin-right: 40rpx;
-  line-height:45rpx;
-  margin-bottom: 0rpx;
-  margin-top: -5rpx;
   color:#888888;
-  text-align: right;
+  position: absolute;
+  bottom: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .cat_image {
@@ -175,9 +175,11 @@
 }
 
 .cat-card-it {
-  font-size: 45rpx;
+  font-size: 30rpx;
   color:black; 
-  font-weight:bold;
+  margin-top: -20rpx;
+  margin-left: 40rpx;
+  /* font-weight:bold; */
   font-style: italic;
   justify-content: flex-start;
 }

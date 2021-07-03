@@ -1,11 +1,32 @@
 Page({
-data: { 
+ data: {
  vege_list:[
-  {
-    name:"山桃",
-  },
-
- ],
+{name:"山桃"},
+{name:"狗尾草"},
+{name:"秋英"},
+{name:"紫藤"},
+{name:"多花紫藤"},
+{name:"迎春花"},
+{name:"蒲公英"},
+{name:"连翘"},
+{name:"蜡梅"},
+{name:"杏"},
+{name:"西府海棠"},
+{name:"珍珠绣线菊"},
+{name:"早开堇菜"},
+{name:"紫荆"},
+{name:"黄刺玫"},
+{name:"诸葛菜"},
+{name:"东京樱花"},
+{name:"金钟花"},
+{name:"德国鸢尾"},
+{name:"白鹃梅"},
+{name:"牡丹"},
+{name:"美洲稠李"},
+{name:"重瓣棣棠花"},
+{name:"流苏树"},
+{name:"抱茎小苦荬"},
+],
   },
    navbarTap: function (e) {
      this.setData({

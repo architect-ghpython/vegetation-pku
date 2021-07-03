@@ -4,12 +4,33 @@ name:"山桃",
  nameit:"Amygdalus davidiana",
 markers: [
 
-{iconPath: "/pages/images/山桃_circle.png",
+{iconPath: "https://7665-vegetation-9g07cn1j2fc808a2-1305114445.tcb.qcloud.la/%E5%B1%B1%E6%A1%83.png",
+id:"0",
+name:"山桃",
 latitude:"39.988859",
 longitude:"116.314021",
 width: 50,
 height: 50
-},],
+},
+
+{iconPath: "https://7665-vegetation-9g07cn1j2fc808a2-1305114445.tcb.qcloud.la/%E5%B1%B1%E6%A1%83.png",
+id:"1",
+name:"山桃",
+latitude:"39.991313",
+longitude:"116.308056",
+width: 50,
+height: 50
+},
+
+{iconPath: "https://7665-vegetation-9g07cn1j2fc808a2-1305114445.tcb.qcloud.la/%E5%B1%B1%E6%A1%83.png",
+id:"2",
+name:"山桃",
+latitude:"39.991346",
+longitude:"116.308098",
+width: 50,
+height: 50
+},
+],
  items:[ 
 {category:"属",
  content:" 桃属",},
@@ -29,8 +50,34 @@ height: 50
 ], 
 relationship:[], 
 nums:[
+{ num: 1 },
 ],
 },
+  previewImage: function (e) {
+  let that = this;
+  let src = e.currentTarget.dataset.src;
+  wx.previewImage({
+    current: src,
+    urls: [src]
+  })
+  },
+
+  markertap(event) {
+    console.log(event.detail.markerId)
+    const markers = this.data.markers;
+    for (let i = 0; i < markers.length; i++) { 
+      if (event.markerId === markers[i].id) {
+            wx.openLocation({
+              latitude: parseFloat(markers[i].latitude),
+              longitude: parseFloat(markers[i].longitude),
+              name: markers[i].name,
+              address: markers[i].name
+            })
+
+      }
+    }
+  },
+  
   //音频播放  
   audioPlay(e) {
     var that = this,
@@ -114,8 +161,8 @@ nums:[
       console.log(res.target)
     }
     return {
-      title: this.data.catname,
-      path: '/pages/index/index?pageId='+this.data.catname,
+      title: this.data.name,
+      path: '/pages/index/index?pageId='+this.data.name,
       success: function (res) {
         // 转发成功
       },
@@ -131,8 +178,8 @@ nums:[
       console.log(res.target)
     }
     return {
-      title: this.data.catname,
-      path: '/pages/index/index?pageId='+this.data.catname,
+      title: this.data.name,
+      path: '/pages/index/index?pageId='+this.data.name,
       success: function (res) {
         // 转发成功
       },

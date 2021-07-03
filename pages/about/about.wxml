@@ -1,62 +1,86 @@
-<!--index.wxml-->
-
-<!-- <view class= "title">北京大学学生流浪猫关爱协会</view>
-<navigator url="/pages/about/web/web">
-<view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" src="/pages/images/huihui.jpg" style= "width: 93%;">
-  </image>
-</view>
-</navigator>
-
-<text> \n </text> -->
-<!-- 
-<view class="head1">协会介绍</view>
-
-<view class="body">
-北京大学学生流浪猫关爱协会（简称“北大猫协”）自 2006 年成立，为北京大学团委指导下、由学生自发组织的非营利性志愿组织。
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
 </view>
 
+<view hidden="{{currentTab!==0}}">
 
-<view class="head1">联系我们</view>
-
-<view class="body">
-点击最上方会徽可以查看小程序介绍推送，点击推送中的【<text bindtap="copy1" class="copy">北大猫协</text>】可关注我们的公众号，公众号会提供捐赠方式。有问题或建议可以关注北大猫协公众号后留言。
-</view>
--->
+  <text> \n </text>
 
 <view class="body">
 此小程序致力于展示北京大学燕园校区内具有观赏性的植物。校园内还有很多其它有趣的物种，欢迎关注“北大绿协”公众号了解。
 </view> 
 
 <view class="body">
-小程序所有代码和植物档案开源，使用 MIT License 。<text bindtap="copy2" class="copy">点击</text>复制 GitHub 仓库链接后请在浏览器中粘贴打开。
+circle 水平有限，如有信息错误欢迎大家批评指正，可以给 circle 发<text bindtap="copy1" class="copy">邮件</text>，点击“邮件”两字复制邮箱地址，同时欢迎大家贡献资料！
 </view> 
 
-<!-- <text bindtap="saveImage" class="copy">北大猫协</text> -->
-
-
-
-
-<!-- <view class="body">
-<navigator url="/pages/donate/donate" >
-<text class="copy">打赏链接</text>
-</navigator>
-</view> -->
+<view class="body">
+小程序所有代码，图片和植物档案开源，使用 MIT License 。<text bindtap="copy2" class="copy">点击</text>复制 GitHub 仓库链接后请在浏览器中粘贴打开，更多说明请点击下方头像查看相关推送。
+</view> 
 
 <text> \n </text>
 
-<view class="staff">2021-03-04</view>
 
-<view class="staff">
-小程序开发：circle
+</view>
+ 
+
+
+<view hidden="{{currentTab!==1}}">
+
+  <text> \n </text>
+
+<view class="body">
+  感谢以下同学为小程序提供资料。
+</view> 
+
+<view class="head1">
+  图片
+</view> 
+
+<view class="body">
+  BYGGou
 </view>
 
-<view class="staff">
-资料统计：circle</view>
+<view class="head1">
+  位置信息
+</view> 
 
-<view class="staff">
-供图：circle
+<view class="body">
+  沙雕
 </view>
+
+<view class="head1">
+  参考资料
+</view> 
+
+<view class="body">
+  1. 植物志官网 http://www.iplant.cn
+</view>
+
+<view class="body">
+  2. 北京大学绿色生命协会公众号
+</view>
+
+
+</view>
+
+
+<!-- <view hidden="{{currentTab!==2}}">
+
+
+</view> -->
+
+<view  class = "logo">
+  <view bindtap="naviToMini" style='flex-shrink:0; box-sizing:border-box; width:3rem;'>
+    <image style="width:3rem;height:3rem;" src="/pages/images/circle 2.png" ></image>
+
+  </view>
+</view>
+
+<text> \n </text>
+
+<view class="staff">© 2021 circle</view>
+
 
 
 <text> \n </text>

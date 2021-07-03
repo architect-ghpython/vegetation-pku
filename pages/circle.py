@@ -94,9 +94,19 @@ for line in data_json:
         names.append(line['名字'])
 # print(names)
 
+# 编写 index.js
+
+with open('index/index.js', 'w', encoding='utf-8') as f:
+    f.write('Page({\n data: {\n vege_list:[\n')
+    for line in data_json:
+        if line['是否写入图鉴'] != '':
+            f.write('{name:"' + line['名字'] + '"},\n')
+    with open('js_index.txt', 'r', encoding='utf-8') as f2:
+        f.write(f2.read())
 
 for line in data_json:
     if line['是否写入图鉴'] != '':
+        mapid = 0
         if not os.path.exists('vegetations/' + line['名字']):
             os.makedirs('vegetations/' + line['名字'])
             # 创建每只猫的文件夹
@@ -112,11 +122,16 @@ for line in data_json:
             for point in coor:
                 x, y = point.split(",")
                 # print(x, y)
-                f.write('\n{iconPath: "/pages/images/' +
-                        line['名字'] + '_circle.png",\n')
+
+                f.write('\n{iconPath: "https://7665-vegetation-9g07cn1j2fc808a2-1305114445.tcb.qcloud.la/' +
+                        urllib.parse.quote(line['名字']) + '.png",\n')
+                f.write('id:"' + str(mapid) + '",\n')
+                f.write('name:"' + line['名字'] + '",\n')
                 f.write('latitude:"' + x + '",\n')
                 f.write('longitude:"' + y + '",\n')
-                f.write('width: 50,\nheight: 50\n},],\n')
+                f.write('width: 50,\nheight: 50\n},\n')
+                mapid = mapid + 1
+            f.write('],\n')
             # 各个属性
             f.write(" items:[ \n")
             for j in labels:
@@ -178,20 +193,21 @@ mapid = 0
 with open('map/' + 'map.js', 'w', encoding='utf-8') as f:
     f.write('Page({ \n data: {\n markers: [ \n')
     for line in data_json:
-        maps = line['坐标']
-        coor = maps.split(";")
-        coor.remove("")
-        for point in coor:
-            x, y = point.split(",")
-            print(x, y)
-            f.write('\n{iconPath: "/pages/images/' +
-                    line['名字'] + '_circle.png",\n')
-            f.write('id:"' + str(mapid) + '",\n')
-            f.write('name:"' + line['名字'] + '",\n')
-            f.write('latitude:"' + x + '",\n')
-            f.write('longitude:"' + y + '",\n')
-            f.write('width: 50,\nheight: 50\n},\n')
-            mapid += 1
+        if line['是否写入图鉴'] != '':
+            maps = line['坐标']
+            coor = maps.split(";")
+            coor.remove("")
+            for point in coor:
+                x, y = point.split(",")
+                print(x, y)
+                f.write('\n{iconPath: "https://7665-vegetation-9g07cn1j2fc808a2-1305114445.tcb.qcloud.la/' +
+                        urllib.parse.quote(line['名字']) + '.png",\n')
+                f.write('id:"' + str(mapid) + '",\n')
+                f.write('name:"' + line['名字'] + '",\n')
+                f.write('latitude:"' + x + '",\n')
+                f.write('longitude:"' + y + '",\n')
+                f.write('width: 50,\nheight: 50\n},\n')
+                mapid += 1
     with open('js-map.txt', 'r', encoding='utf-8') as f2:
         f.write(f2.read())
 

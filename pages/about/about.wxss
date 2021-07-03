@@ -1,0 +1,38 @@
+.navbar{
+  flex: none;
+  display: flex;
+  background: #fff;
+  margin-top: 20rpx;
+  /* margin-bottom: 30rpx; */
+}
+.navbar .item{
+  position: relative;
+  flex: auto;
+  bottom: -20rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #888888;
+  font-size: 32rpx;
+}
+.navbar .item.active{
+  color: #EDC43C;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0rpx;
+  left: 40rpx;
+  right: 40rpx;
+  height: 4rpx;
+  background: #EDC43C;
+}
+
+.logo {
+  font-size: 20rpx;
+  position: absolute;
+  bottom: 60rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

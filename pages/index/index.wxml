@@ -14,7 +14,7 @@
 <block wx:for="{{vege_list}}">
   <navigator url="/pages/vegetations/{{item.name}}/{{item.name}}" >
     <view class="catitem">
-      <image  class = 'avator ' src="../images/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <image  class = 'avator ' src="https://7665-vegetation-9g07cn1j2fc808a2-1305114445.tcb.qcloud.la/{{item.name}}.png" mode='aspectFill' ></image>
       <view class= "cat-name">{{item.name}}</view> 
     </view>
     <view class="divLine"></view>

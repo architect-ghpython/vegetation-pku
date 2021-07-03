@@ -1,13 +1,15 @@
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="cloud://vegetation-9g07cn1j2fc808a2.7665-vegetation-9g07cn1j2fc808a2-1305114445/{{name}}.png" style= "width: 90%;">
+  <image mode="widthFix" class="cat_image" src="cloud://vegetation-9g07cn1j2fc808a2.7665-vegetation-9g07cn1j2fc808a2-1305114445/{{name}}.jpg" data-src="cloud://vegetation-9g07cn1j2fc808a2.7665-vegetation-9g07cn1j2fc808a2-1305114445/{{name}}.jpg" bindtap='previewImage' style= "width: 90%;">
   </image>
 </view>
 
 
 <view class = "itemname1">
-    <view class= "cat-card">{{name}} </view> <text decode="{{true}}">&nbsp;&nbsp;</text> <view class= "cat-card-it">{{nameit}}</view>
+    <view class= "cat-card">{{name}} </view> 
 </view>
-
+<view class = "ita">
+    <view class= "cat-card-it">{{nameit}}</view>
+</view>
 
 
 <view class = "itemname1">
@@ -25,7 +27,7 @@
 <block wx:for="{{nums}}">
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}{{item.num}}.jpg" style= "width: 90%;">
+  <image mode="widthFix" class="cat_image" src="cloud://vegetation-9g07cn1j2fc808a2.7665-vegetation-9g07cn1j2fc808a2-1305114445/{{name}}{{item.num}}.jpg" data-src="cloud://vegetation-9g07cn1j2fc808a2.7665-vegetation-9g07cn1j2fc808a2-1305114445/{{name}}{{item.num}}.jpg" bindtap='previewImage' style= "width: 90%;">
   </image>
 </view>
 

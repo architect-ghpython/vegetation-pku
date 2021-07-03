@@ -1,2 +1,2 @@
 <!-- map.wxml -->
-<map id="map" longitude="116.310694" latitude="39.992779" subkey="44WBZ-WSY6W-OKPR3-R6STW-U6FMZ-YUB7B" layer-style="1" scale="15" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-compass="ture" show-scale = "ture" show-location style="width: 100%; height: 100%;"></map>
+<map id="map" longitude="116.310694" latitude="39.992779" subkey="44WBZ-WSY6W-OKPR3-R6STW-U6FMZ-YUB7B" layer-style="1" scale="15" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-compass="ture" show-scale = "ture" show-location style="width: 100%; height: 100%;" ></map>

@@ -5,7 +5,14 @@ Page({
     screenWidth: 0,
     screenHeight: 0,
     imgwidth: 0,
-    imgheight: 0
+    imgheight: 0,
+    navbar: ['简介', '致谢'],
+    currentTab: 0,
+  },
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
   },
   //转发功能
   onShareAppMessage: function () {
@@ -43,7 +50,7 @@ Page({
   copy1: function (e) {
   var self = this;
   wx.setClipboardData({
-    data: '北大猫协',//需要复制的内容
+    data: 'yuanlq@pku.edu.cn',//需要复制的内容
     success: function (res) {
       // self.setData({copyTip:true}),
      

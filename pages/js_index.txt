@@ -1,9 +1,4 @@
-    screenWidth: 0,
-    screenHeight: 0,
-    imgwidth: 0,
-    imgheight: 0,
-    navbar: ['在校', '毕业', '休学', '喵星'],
-    currentTab: 0,
+],
   },
    navbarTap: function (e) {
      this.setData({
@@ -23,7 +18,7 @@
   onLoad: function (options) {
     if (options.pageId) {
       wx.navigateTo({
-        url: '/pages/cats/' + options.pageId + '/' + options.pageId,
+        url: '/pages/vegetations/' + options.pageId + '/' + options.pageId,
       })
     }
   },
@@ -71,7 +66,7 @@
     console.log("e.detail.value");
     if(e.detail.value) {
     wx.navigateTo({
-      url: '/pages/cats/' + e.detail.value + '/' + e.detail.value,
+      url: '/pages/vegetations/' + e.detail.value + '/' + e.detail.value,
     })
   }
    },
@@ -85,6 +80,21 @@
        }
      })
    },
+
+   naviToMini:function(e){
+    wx.navigateToMiniProgram({
+      appId: '',
+      path: 'page/index/index?id=123',
+      extraData: {
+        foo: 'bar'
+      },
+      envVersion: 'release',
+      success(res) {
+        // 打开成功
+      }
+    })
+   }
+   
 
 })
 
